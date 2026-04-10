@@ -167,6 +167,13 @@
   opacity: 0.7;
 }
 
+/* Burger spans transition */
+#menu-toggle span {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
 /* Hero Text Mobile Fixes */
 @media (max-width: 768px) {
   #hero-text-parallax {
@@ -247,10 +254,23 @@ h3[id] {
     object-position: center bottom !important;
   }
 
-  /* --- 4. SERVICES: Hide the absolute chalkboard overlay on mobile
-     since it clips and looks broken — the image alone is clean --- */
+  /* --- 4. SERVICES: Show chalkboard text on mobile properly ---
+     Keep it visible but scale down to fit the smaller container --- */
   .mobile-chalkboard {
-    display: none !important;
+    display: flex !important;
+    top: 5% !important;
+    left: 2% !important;
+    width: 55% !important;
+    height: 50% !important;
+  }
+
+  .mobile-chalkboard h3 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mobile-chalkboard #chalk-text {
+    font-size: 0.75rem !important;
   }
 
   /* --- 5. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */

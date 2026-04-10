@@ -274,52 +274,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuSpans = menuToggle?.querySelectorAll("span");
   const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
-  const toggleMenu = () => {
-    const isOpen = mobileMenu.classList.contains("translate-x-0");
+  let menuOpen = false;
 
-    if (isOpen) {
-      mobileMenu.classList.remove("translate-x-0");
-      mobileMenu.classList.add("translate-x-full");
-      document.body.classList.remove("overflow-hidden");
-
-      // Reset Hamburger Icon
-      if (menuSpans) {
-        gsap.to(menuSpans[0], { rotate: 0, y: 0, duration: 0.3 });
-        gsap.to(menuSpans[1], { opacity: 1, duration: 0.3 });
-        gsap.to(menuSpans[2], { rotate: 0, y: 0, duration: 0.3 });
-      }
-    } else {
-      mobileMenu.classList.remove("translate-x-full");
-      mobileMenu.classList.add("translate-x-0");
-      document.body.classList.add("overflow-hidden");
-
-      // Transform to Close Icon
-      if (menuSpans) {
-        gsap.to(menuSpans[0], { rotate: 45, y: 7, duration: 0.3 });
-        gsap.to(menuSpans[1], { opacity: 0, duration: 0.3 });
-        gsap.to(menuSpans[2], { rotate: -45, y: -7, duration: 0.3 });
-      }
-
-      // Animate Links
-      gsap.from(mobileLinks, {
-        y: 20,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.5,
-        ease: "power2.out",
-        delay: 0.2,
-      });
+  const openMenu = () => {
+    menuOpen = true;
+    mobileMenu.classList.remove("translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    document.body.classList.add("overflow-hidden");
+    if (menuSpans && menuSpans.length >= 3) {
+      menuSpans[0].style.transform = "rotate(45deg) translate(4px, 4px)";
+      menuSpans[1].style.opacity = "0";
+      menuSpans[2].style.transform = "rotate(-45deg) translate(4px, -4px)";
     }
   };
 
-  menuToggle?.addEventListener("click", toggleMenu);
+  const closeMenu = () => {
+    menuOpen = false;
+    mobileMenu.classList.remove("translate-x-0");
+    mobileMenu.classList.add("translate-x-full");
+    document.body.classList.remove("overflow-hidden");
+    if (menuSpans && menuSpans.length >= 3) {
+      menuSpans[0].style.transform = "";
+      menuSpans[1].style.opacity = "";
+      menuSpans[2].style.transform = "";
+    }
+  };
 
-  // Close menu when clicking links
+  menuToggle?.addEventListener("click", () => {
+    if (menuOpen) closeMenu();
+    else openMenu();
+  });
+
+  // Close menu when clicking any nav link
   mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (mobileMenu.classList.contains("translate-x-0")) {
-        toggleMenu();
-      }
-    });
+    link.addEventListener("click", closeMenu);
   });
 });
