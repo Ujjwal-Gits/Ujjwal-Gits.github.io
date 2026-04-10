@@ -174,6 +174,23 @@
     opacity 0.3s ease;
 }
 
+/* iPhone/notched device: prevent gap above fixed header caused by safe-area-inset.
+   The header uses fixed positioning — on iOS Safari with dynamic toolbar,
+   the body starts below the safe area but fixed elements don't account for it,
+   creating a gap. We pad the header to fill it. Desktop unaffected. */
+@supports (padding-top: env(safe-area-inset-top)) {
+  @media (max-width: 767px) {
+    header.fixed {
+      padding-top: max(0.75rem, env(safe-area-inset-top)) !important;
+      padding-bottom: 0.75rem !important;
+    }
+    /* Also ensure the body top padding accounts for the taller header */
+    body {
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+}
+
 /* Hero Text Mobile Fixes */
 @media (max-width: 768px) {
   #hero-text-parallax {
@@ -258,19 +275,24 @@ h3[id] {
      Keep it visible but scale down to fit the smaller container --- */
   .mobile-chalkboard {
     display: flex !important;
-    top: 5% !important;
-    left: 2% !important;
-    width: 55% !important;
-    height: 50% !important;
+    top: 4% !important;
+    left: 3% !important;
+    width: 62% !important;
+    height: 55% !important;
   }
 
   .mobile-chalkboard h3 {
-    font-size: 0.85rem !important;
-    margin-bottom: 0.25rem !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.2rem !important;
+    padding-bottom: 4px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
   }
 
   .mobile-chalkboard #chalk-text {
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    padding: 0 2px !important;
   }
 
   /* --- 5. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
