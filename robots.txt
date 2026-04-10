@@ -1,0 +1,37 @@
+# ujjwalrupakheti.com.np robots.txt
+# Full-stack Web Developer, Software Developer & SEO Strategist
+
+User-agent: *
+Allow: /
+Disallow: /assets/favicon/
+
+# Sitemaps
+Sitemap: https://ujjwalrupakheti.com.np/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+# Crawl-delay: 1
+
+# Specific AI/LLM Crawlers (AEO/GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /

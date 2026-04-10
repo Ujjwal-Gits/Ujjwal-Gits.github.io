@@ -1,0 +1,24 @@
+/* TEAM */
+  Founder: Ujjwal Rupakheti
+  Role: Full-Stack Web Developer, Software Developer & SEO Strategist
+  Specialization: Website Development, Software Engineering, QA Bug Testing, SEO, AEO, GEO, AIO, SXO, VEO
+  Contact: work@ujjwalrupakheti.com.np
+  Location: Itahari, Koshi Province, Nepal
+  Twitter: @ujjwalrupakheti
+  GitHub: github.com/Ujjwal-Gits
+  LinkedIn: linkedin.com/in/ujjwal-rupakheti-bb421b339/
+
+/* SITE */
+  Last update: 2026/04/11
+  Standards: HTML5, CSS3, JSON-LD Schema (WebSite, Person, Service, BreadcrumbList, FAQPage, HowTo, Article)
+  Components: Tailwind CSS, GSAP, FormSpree, Advanced SEO Engineering
+  SEO Stack: Technical SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Optimization (AIO), Search Experience Optimization (SXO), Voice Engine Optimization (VEO)
+  Development: Ujjwal Rupakheti (https://ujjwalrupakheti.com.np)
+  Objective: Dominating search landscapes through technical integrity, semantic entity resolution, and AI-citeable content architecture.
+
+/* TECHNOLOGY PACK */
+  Search: Knowledge Graph Optimization, Entity-Based SEO, Speakable Specification, SearchAction
+  Frontend: Space Grotesk, Inter, GSAP ScrollTrigger, High-Performance Architectural Codebases
+  Accessibility: AAA Compliance Standards, Semantic HTML5
+  Performance: Core Web Vitals Optimized, Mobile-First Responsive
+  AI Crawlers: GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, Anthropic-ai Allowed
