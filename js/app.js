@@ -1,3 +1,14 @@
+// Strip /index.html from URL if it appears (GitHub Pages quirk)
+if (window.location.pathname.endsWith("/index.html")) {
+  window.history.replaceState(
+    null,
+    "",
+    window.location.pathname.replace("/index.html", "/") +
+      window.location.search +
+      window.location.hash,
+  );
+}
+
 // Form Submission Success Handler
 (function () {
   // Inject success card styles once
