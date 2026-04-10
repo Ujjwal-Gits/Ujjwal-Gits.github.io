@@ -201,13 +201,7 @@ h3[id] {
    ============================================================ */
 
 @media (max-width: 767px) {
-  /* --- 1. HEADER: Compact on mobile --- */
-  header.fixed {
-    padding-top: 0.55rem !important;
-    padding-bottom: 0.55rem !important;
-  }
-
-  /* --- 2. MOBILE NAV: Reduce link size & fix spacing --- */
+  /* --- 1. MOBILE NAV: Reduce link size & fix spacing --- */
   #mobile-menu .nav-link-mobile {
     font-size: 1.4rem !important;
     letter-spacing: 0.1em !important;
@@ -225,70 +219,43 @@ h3[id] {
     padding-bottom: 4rem !important;
   }
 
-  /* --- 3. HERO IMAGE: Fix cropping on all inner pages ---
-     The wrapper has overflow-hidden + h-[50vh] which clips the image.
-     We override both to let the image show fully. */
+  /* --- 2. HERO H1: Reduce size so less vertical space is consumed,
+     giving the image pane more room to show the full image --- */
+  .mobile-h1 {
+    font-size: 2rem !important;
+    line-height: 0.95 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* --- 3. HERO IMAGE CONTAINER: Increase height so image isn't cropped --- */
   .mobile-hero-img-wrap {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-    padding: 1.5rem 1rem 2rem !important;
+    height: 60vw !important;
+    min-height: 240px !important;
+    max-height: 340px !important;
+    overflow: hidden !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-end !important;
     justify-content: center !important;
   }
 
-  .mobile-hero-img-wrap img,
   .mobile-hero-img {
-    height: auto !important;
-    width: 82% !important;
-    max-width: 290px !important;
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
     transform: none !important;
-    margin: 0 auto !important;
-    display: block !important;
     object-fit: contain !important;
+    object-position: center bottom !important;
   }
 
-  /* --- 4. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
-  .experience-card {
-    padding-left: 1.75rem !important;
+  /* --- 4. SERVICES: Hide the absolute chalkboard overlay on mobile
+     since it clips and looks broken — the image alone is clean --- */
+  .mobile-chalkboard {
+    display: none !important;
   }
 
+  /* --- 5. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
   .experience-card h3 {
     font-size: 1.3rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* --- 5. SERVICES PAGE: Fix chalkboard/Nepali text on mobile ---
-     The overlay is absolute inside overflow-hidden, so it's clipped.
-     On mobile we reposition it to sit above the image naturally. */
-  .mobile-chalkboard {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    padding: 1rem 0.5rem 0.5rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    pointer-events: none !important;
-  }
-
-  .mobile-chalkboard h3 {
-    font-size: 1.1rem !important;
-    color: rgba(13, 28, 50, 0.7) !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* Wrap the image + chalkboard together on mobile */
-  .mobile-hero-img-wrap {
-    flex-direction: column !important;
-  }
-
-  /* --- 6. INDEX.HTML: Fix service cards text overlap --- */
-  #services-summary .grid > div {
-    min-height: auto !important;
   }
 }
