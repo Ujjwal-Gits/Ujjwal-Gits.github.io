@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- ADVANCED SEO / BLOG ARCHIVE -->
+    <title>SEO & Tech Insights | Ujjwal Rupakheti Blog - Development & Search Strategy</title>
+    <meta name="description" content="Explore the technical insights of Ujjwal Rupakheti. Weekly articles on SEO, full-stack engineering, and digital growth strategies for the 2026 search landscape.">
+    <meta name="keywords" content="Ujjwal Rupakheti Blog, SEO Strategy 2026, Web Development Insights, Expert Coding, Tech Narrative, GEO, AEO, AIO, SXO, VEO">
+    <link rel="canonical" href="https://ujjwalrupakheti.com.np/blog/" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Tech & SEO Insights | Ujjwal Rupakheti Blog" />
+    <meta property="og:description" content="Explore insights into technical SEO, full-stack development, and digital growth strategies from Ujjwal Rupakheti." />
+    <meta property="og:url" content="https://ujjwalrupakheti.com.np/blog/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Advanced AIO / GEO / VEO / SXO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Ujjwal Tech & SEO Narrative",
+      "description": "Weekly insights into website development, software engineering, professional SEO, AEO, GEO, AIO, SXO, and VEO by Ujjwal Rupakheti.",
+      "author": {
+        "@type": "Person",
+        "name": "Ujjwal Rupakheti",
+        "jobTitle": "Website Developer & Software Developer",
+        "knowsAbout": ["Website Development", "Software Development", "QA Bug Testing", "SEO", "AEO", "GEO", "AIO", "SXO", "VEO"]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "h3", ".post-excerpt"]
+      }
+    }
+    </script>
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Enhanced Crawl Directives -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="bingbot" content="index, follow">
+    <meta name="author" content="Ujjwal Rupakheti">
+
+    <!-- Open Graph Enhancements -->
+    <meta property="og:site_name" content="UJJWAL RUPAKHETI" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tech & SEO Insights | Ujjwal Rupakheti Blog" />
+    <meta name="twitter:description" content="Weekly articles on SEO, AEO, GEO, full-stack engineering, and digital growth strategies for 2026." />
+    <meta name="twitter:creator" content="@ujjwalrupakheti" />
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ujjwalrupakheti.com.np/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://ujjwalrupakheti.com.np/blog/"
+      }]
+    }
+    </script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0d1c32">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#0d1c32",
+                        "surface-tint": "#515f78",
+                        "secondary": "#556067",
+                        "background": "#f7f9fc",
+                        "surface": "#f7f9fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "cursive": ["Playfair Display", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .outline-text {
+            -webkit-text-stroke: 2px #0d1c32;
+            color: rgba(13, 28, 50, 0.03);
+            paint-order: stroke fill;
+        }
+        .vertical-lr {
+            writing-mode: vertical-lr;
+        }
+        .bg-grid-dots {
+            background-image: radial-gradient(#0d1c32 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .blog-card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .blog-card-hover:hover {
+            transform: translateY(-8px);
+            border-color: #0d1c32;
+        }
+    </style>
+</head>
+<body class="bg-background text-primary-container selection:bg-primary-container selection:text-white overflow-x-hidden">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 md:py-6 bg-[#ffffff]/80 dark:bg-[#0A192F]/80 backdrop-blur-xl border-b-2 border-[#0d1c32]/10 dark:border-[#eceef1]/10 z-[100]">
+        <a href="/" class="text-xl md:text-2xl font-black tracking-tighter text-[#0d1c32] dark:text-white font-headline hover:opacity-70 transition-opacity">UJJWAL</a>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/work/">Works</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/about/">About</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/services/">Services</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/experience/">Experience</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/education/">Education</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#0d1c32] dark:text-white transition-colors text-xs underline underline-offset-8 decoration-2" href="/blog/">Blogs</a>
+            <a class="font-headline uppercase tracking-tighter font-bold text-[#515f78] dark:text-[#d9e4ed] hover:text-[#0d1c32] dark:hover:text-white transition-colors text-xs" href="/contact/">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button class="open-contact-trigger hidden md:flex items-center justify-center bg-primary-container text-white px-4 md:px-6 py-2 font-headline uppercase tracking-widest text-[10px] md:text-xs font-bold hover:bg-tertiary-container transition-all active:opacity-80 active:scale-[0.99] border-2 border-transparent">
+                Get in Touch
+            </button>
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none z-[110]" aria-label="Toggle Menu">
+                <span class="w-6 h-0.5 bg-primary-container transition-all duration-300 origin-center"></span>
+                <span class="w-6 h-0.5 bg-primary-container transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-primary-container transition-all duration-300 origin-center"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-[#0A192F]/95 backdrop-blur-2xl z-[90] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 ease-in-out md:hidden text-center overflow-y-auto w-full">
+        <div class="absolute inset-0 bg-grid-dots opacity-[0.05]"></div>
+        <nav class="flex flex-col items-center justify-center gap-10 z-10 w-full px-6 h-full mt-10">
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/work/">Works</a>
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/about/">About</a>
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/services/">Services</a>
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/experience/">Experience</a>
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/education/">Education</a>
+            <a class="nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105" href="/blog/">Blogs</a>
+            <button class="open-contact-trigger nav-link-mobile text-4xl font-headline font-black uppercase tracking-widest text-[#0d1c32] dark:text-white transition-all transform hover:scale-105">Contact</button>
+            <button class="open-contact-trigger mt-8 bg-[#0d1c32] dark:bg-white text-white dark:text-[#0d1c32] px-12 py-5 font-headline uppercase tracking-[0.3em] text-xs font-black shadow-2xl active:scale-95 transition-all">
+                Get in Touch
+            </button>
+        </nav>
+        <div class="absolute bottom-10 flex gap-10 z-10">
+            <a href="https://www.linkedin.com/in/ujjwal-rupakheti-bb421b339/" target="_blank" rel="noopener noreferrer" class="text-[#0d1c32] dark:text-white text-2xl"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Ujjwal-Gits" target="_blank" rel="noopener noreferrer" class="text-[#0d1c32] dark:text-white text-2xl"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/9826304766" target="_blank" rel="noopener noreferrer" class="text-[#0d1c32] dark:text-white text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/mr.uzaldahal/" target="_blank" rel="noopener noreferrer" class="text-[#0d1c32] dark:text-white text-2xl"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+
+    <aside class="hidden md:flex fixed left-0 top-0 h-full flex-col items-center py-24 z-40 bg-[#eceef1] border-r-2 border-[#0d1c32]/10 w-16">
+        <div class="flex-1 flex flex-col items-center justify-center gap-10">
+            <a class="vertical-lr font-body text-[10px] uppercase tracking-[0.2em] text-[#515f78] hover:translate-x-1 transition-transform" href="https://www.linkedin.com/in/ujjwal-rupakheti-bb421b339/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in mb-3 text-sm"></i> LinkedIn
+            </a>
+            <a class="vertical-lr font-body text-[10px] uppercase tracking-[0.2em] text-[#515f78] hover:translate-x-1 transition-transform" href="https://github.com/Ujjwal-Gits" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github mb-3 text-sm"></i> GitHub
+            </a>
+            <a class="vertical-lr font-body text-[10px] uppercase tracking-[0.2em] text-[#515f78] hover:translate-x-1 transition-transform" href="https://wa.me/9826304766" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp mb-3 text-sm"></i> WhatsApp
+            </a>
+            <a class="vertical-lr font-body text-[10px] uppercase tracking-[0.2em] text-[#515f78] hover:translate-x-1 transition-transform" href="https://www.instagram.com/mr.uzaldahal/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram mb-3 text-sm"></i> Instagram
+            </a>
+        </div>
+        <div class="vertical-lr flex flex-col items-center gap-1 font-body text-[10px] uppercase tracking-[0.5em] text-[#0d1c32] font-black py-8">
+            <span class="mb-4">2024</span>
+            <span>EST.</span>
+        </div>
+    </aside>
+
+    <main class="ml-0 md:ml-16 pt-20 md:pt-24 min-h-screen">
+        <!-- Hero Section: The Narrative Hero -->
+        <section class="h-[calc(100vh-5rem)] md:h-[calc(100vh-6rem)] relative bg-white border-b-2 border-primary-container overflow-hidden">
+            <div class="absolute inset-0 bg-grid-dots opacity-[0.03] pointer-events-none"></div>
+
+            <!-- Vertical Divider Line (Absolute Centered Reference) -->
+            <div class="hidden lg:flex absolute left-1/2 top-0 bottom-0 w-[1px] bg-primary-container/10 -translate-x-1/2 flex-col items-center justify-center gap-32 z-30">
+                <div class="w-2 h-2 rounded-full border border-primary-container bg-white shadow-sm"></div>
+                <div class="w-2 h-2 rounded-full border border-primary-container bg-white shadow-sm"></div>
+            </div>
+            
+            <div class="w-full h-full max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center lg:-translate-y-4">
+                <!-- Left Side: Journal Briefing -->
+                <div class="w-full lg:w-1/2 flex items-center justify-center px-6 py-8 lg:p-12 h-full z-20">
+                    <div class="relative p-0 lg:p-12 border-0 lg:border lg:border-primary-container/15 bg-white lg:shadow-sm w-full max-w-xl lg:min-h-[400px] lg:h-[550px] flex flex-col justify-between">
+                        <!-- Design Accents -->
+                        <div class="absolute -top-[1px] -left-[1px] w-8 h-8 border-t-2 border-l-2 border-[#0d1c32] hidden lg:block"></div>
+                        <div class="absolute -bottom-[1px] -right-[1px] w-8 h-8 border-b-2 border-r-2 border-[#0d1c32] hidden lg:block"></div>
+                        
+                        <div>
+                            <span class="text-surface-tint font-label text-[10px] uppercase tracking-[0.5em] block mb-6 border-l-2 border-primary-container/20 pl-4 w-fit italic">Registry</span>
+                            
+                            <h1 class="font-headline text-[3.5rem] lg:text-[4rem] font-black tracking-tighter leading-[0.9] text-primary-container uppercase mb-10">
+                                BLOG &<br>INSIGHTS
+                            </h1>
+                        </div>
+                        
+                        <div class="border-t border-primary-container/10 pt-8 mt-8">
+                            <div class="flex items-center gap-4 mb-8">
+                                <span class="font-headline text-lg font-black text-primary-container uppercase">Ujjwal</span>
+                                <span class="w-8 h-[1px] bg-primary-container/20"></span>
+                                <span class="font-label text-[10px] uppercase tracking-widest text-surface-tint">Analysis / SEO</span>
+                            </div>
+                            <p class="font-body text-[10px] text-secondary uppercase tracking-widest leading-relaxed opacity-70 mb-4">
+                                A collection of technical manifestos focusing on full-stack architecture, SEO dominance, and high-performance engineering.
+                            </p>
+                            <p class="font-body text-[10px] text-secondary uppercase tracking-widest leading-relaxed opacity-70">
+                                Decoding complex systems and establishing digital authority through rigorous technical analysis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="w-full lg:w-1/2 flex items-center justify-center p-0 lg:p-12 h-auto lg:h-full z-20 mt-0 pb-0 lg:pb-12">
+                    <div class="relative border-0 lg:border lg:border-primary-container/15 bg-white lg:shadow-sm w-full lg:max-w-xl h-[50vh] lg:h-[550px] overflow-hidden flex items-end justify-center">
+                        <!-- Corner Accents -->
+                        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-container z-20 hidden lg:block"></div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-container z-20 hidden lg:block"></div>
+                        
+                        <div class="absolute inset-0 bg-grid-dots opacity-[0.05] pointer-events-none hidden lg:block"></div>
+
+                        <img src="/assets/images/bloguzal.png" 
+                             alt="Ujjwal Rupakheti Blog" 
+                             class="h-[110%] w-auto max-w-none object-contain translate-y-[5%] relative z-10 transition-transform duration-1000 group-hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Registry: The Elite Grid -->
+        <section class="bg-white border-b-2 border-primary-container relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-2 border-primary-container overflow-hidden">
+                
+                <!-- Blog Card 01: Active Strategy -->
+                <a href="/blogs/how-to-do-seo-in-2026/" class="group relative border-b-2 border-r-0 md:border-r-2 border-primary-container bg-white min-h-[480px] flex flex-col p-10 transition-all duration-700 hover:bg-primary-container overflow-hidden">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container text-white group-hover:bg-white group-hover:text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em] transition-colors duration-500">Post / 01</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-40 group-hover:text-white transition-all duration-500 uppercase">Deployed / 04.08</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container group-hover:text-white leading-[0.85] uppercase mb-8 transition-colors duration-500">
+                                SEARCH<br>DOMINANCE<br>2026
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary group-hover:text-white/60 leading-relaxed opacity-80 mb-8 transition-all duration-500 uppercase tracking-widest">
+                                Master AEO and Semantic Architecture to establish market authority in the next frontier of search.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10 group-hover:border-white/10 transition-colors duration-500">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container group-hover:text-white">Access Manifesto</span>
+                            <i class="fa-solid fa-arrow-right-long text-primary-container group-hover:text-white group-hover:translate-x-2 transition-all duration-500"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Card 02: Scheduled -->
+                <div class="group relative border-b-2 border-r-0 md:border-r-0 lg:border-r-2 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 02</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                SCALABLE<br>REACT<br>PROTOCOLS
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                Architecting high-concurrency systems using modular technical frameworks.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 03: Scheduled -->
+                <div class="group relative border-b-2 border-r-0 md:border-r-2 lg:border-r-2 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 03</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                AEO: THE<br>SYNTHESIS<br>FRONTIER
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                Optimizing for AI synthesis and decentralized search protocols.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 04: Scheduled -->
+                <div class="group relative border-b-2 border-r-0 md:border-r-0 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 04</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                NARRATIVE<br>TECHNICAL<br>AESTHETICS
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                The intersection of UI narrative and backend performance.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <!-- Card 05: Scheduled -->
+                <div class="group relative border-b-2 lg:border-b-0 border-r-0 md:border-r-2 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 05</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                PERFORMANCE<br>AS A<br>BRAND
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                Why sub-500ms response times are your best marketing tool.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 06: Scheduled -->
+                <div class="group relative border-b-2 lg:border-b-0 border-r-0 md:border-r-0 lg:border-r-2 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 06</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                GROWTH<br>CORE<br>SYSTEMS
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                Scalable databases for high-traffic architecture.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 07: Scheduled -->
+                <div class="group relative border-b-2 md:border-b-0 border-r-0 md:border-r-2 lg:border-r-2 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 07</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                DATA<br>ETHICS &<br>INTEGRITY
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                The future of privacy in automated engineering.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 08: Scheduled -->
+                <div class="group relative border-r-0 border-b-0 border-primary-container bg-[#fcfcfc] min-h-[480px] flex flex-col p-10 cursor-alias">
+                    <div class="relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-12">
+                                <span class="bg-primary-container/5 text-primary-container px-4 py-1.5 font-headline text-[9px] font-black uppercase tracking-[0.4em]">Post / 08</span>
+                                <span class="font-mono text-[9px] text-surface-tint opacity-30 uppercase">Status / Locked</span>
+                            </div>
+                            
+                            <h3 class="font-headline text-3xl font-black tracking-tighter text-primary-container/30 leading-[0.85] uppercase mb-8">
+                                THE<br>DEVELOPER<br>MINDSET
+                            </h3>
+                            
+                            <p class="font-body text-xs text-secondary leading-relaxed opacity-40 mb-8 uppercase tracking-widest">
+                                Shifting from coding to full-cycle engineering.
+                            </p>
+                        </div>
+                        
+                        <div class="flex justify-between items-end pt-8 border-t border-primary-container/10">
+                            <span class="font-headline text-[10px] font-black uppercase tracking-[0.4em] text-primary-container/20 italic">Awaiting Deployment</span>
+                            <i class="fa-solid fa-lock text-[10px] text-primary-container/20"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+                <!-- Pagination -->
+                <div class="mt-16 flex justify-center items-center gap-8">
+                    <span class="w-12 h-[2px] bg-primary-container/10"></span>
+                    <p class="font-headline text-[10px] font-black uppercase tracking-[0.5em] text-primary-container">Page 01</p>
+                    <span class="w-12 h-[2px] bg-primary-container/10"></span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="px-6 md:px-12 h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-white border-t border-primary-container/10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10 w-full px-4">
+            <p class="font-cursive text-3xl sm:text-4xl md:text-6xl text-primary-container/80 mb-8 md:mb-12 tracking-wide italic leading-normal md:px-8">
+                My blog is a simple collection of my projects and thoughts.
+            </p>
+            <h2 class="font-headline text-5xl sm:text-7xl md:text-[16rem] font-black md:tracking-[calc(-0.03em)] text-transparent outline-text opacity-80 leading-none select-none uppercase overflow-hidden text-center w-full">
+                UJR HERE!
+            </h2>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Entrance Animations for Main Sections
+            gsap.from("main section", {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "main",
+                    start: "top 80%"
+                }
+            });
+
+            // Modal Controller Logic
+            const openBtns = document.querySelectorAll('.open-contact-trigger');
+            const closeBtn = document.getElementById('close-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const modal = document.getElementById('contact-modal');
+            const body = document.body;
+
+            const toggleModal = () => {
+                const isOpen = !modal.classList.contains('hidden');
+                if (isOpen) {
+                    modal.classList.add('hidden');
+                    body.style.overflow = '';
+                } else {
+                    modal.classList.remove('hidden');
+                    body.style.overflow = 'hidden';
+                    gsap.from('#contact-modal .relative', {
+                        y: 20,
+                        opacity: 0,
+                        duration: 0.6,
+                        ease: "power4.out"
+                    });
+                }
+            };
+
+            openBtns.forEach(btn => btn.addEventListener('click', toggleModal));
+            if(closeBtn) closeBtn.addEventListener('click', toggleModal);
+            if(overlay) overlay.addEventListener('click', toggleModal);
+
+            // Custom Select Logic
+            const customSelect = document.getElementById('engagement-type-select');
+            if(customSelect) {
+                const selectTrigger = customSelect.querySelector('.select-trigger');
+                const selectOptions = customSelect.querySelector('.select-options');
+                const selectedValue = customSelect.querySelector('.selected-value');
+                const selectInput = document.getElementById('engagement-type-input');
+                const optionItems = customSelect.querySelectorAll('.option-item');
+                const arrow = selectTrigger.querySelector('.material-symbols-outlined');
+
+                selectTrigger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isHidden = selectOptions.classList.contains('hidden');
+                    if (isHidden) {
+                        selectOptions.classList.remove('hidden');
+                        gsap.to(selectOptions, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+                        gsap.to(arrow, { rotate: 180, duration: 0.4 });
+                    } else {
+                        gsap.to(selectOptions, { 
+                            opacity: 0, 
+                            y: -10, 
+                            duration: 0.3, 
+                            ease: "power2.in",
+                            onComplete: () => selectOptions.classList.add('hidden') 
+                        });
+                        gsap.to(arrow, { rotate: 0, duration: 0.4 });
+                    }
+                });
+
+                optionItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const val = item.getAttribute('data-value');
+                        selectedValue.textContent = val;
+                        selectInput.value = val;
+                        gsap.to(selectOptions, { opacity: 0, y: -10, duration: 0.3, onComplete: () => selectOptions.classList.add('hidden') });
+                        gsap.to(arrow, { rotate: 0, duration: 0.4 });
+                    });
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (customSelect && !customSelect.contains(e.target) && !selectOptions.classList.contains('hidden')) {
+                        gsap.to(selectOptions, { opacity: 0, y: -10, duration: 0.3, onComplete: () => selectOptions.classList.add('hidden') });
+                        gsap.to(arrow, { rotate: 0, duration: 0.4 });
+                    }
+                });
+            }
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('translate-x-full');
+                    const isOpen = !mobileMenu.classList.contains('translate-x-full');
+                    body.style.overflow = isOpen ? 'hidden' : '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
+
