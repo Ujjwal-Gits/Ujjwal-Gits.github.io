@@ -170,16 +170,12 @@
 /* Hero Text Mobile Fixes */
 @media (max-width: 768px) {
   #hero-text-parallax {
-    transform: none !important; /* Disable parallax tilt on mobile for better usability */
+    transform: none !important;
   }
 
   .outline-text {
     -webkit-text-stroke: 1px #0d1c32;
-    color: #0d1c32 !important; /* Remove transparency on mobile for better legibility as requested */
-  }
-
-  .overflow-hidden {
-    overflow: hidden !important;
+    color: #0d1c32 !important;
   }
 }
 
@@ -205,80 +201,94 @@ h3[id] {
    ============================================================ */
 
 @media (max-width: 767px) {
-  /* --- 1. MOBILE NAV: Reduce link size & fix spacing --- */
-  #mobile-menu nav a.nav-link-mobile,
-  #mobile-menu nav button.nav-link-mobile {
-    font-size: 1.5rem !important;
-    letter-spacing: 0.15em !important;
+  /* --- 1. HEADER: Compact on mobile --- */
+  header.fixed {
+    padding-top: 0.55rem !important;
+    padding-bottom: 0.55rem !important;
+  }
+
+  /* --- 2. MOBILE NAV: Reduce link size & fix spacing --- */
+  #mobile-menu .nav-link-mobile {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.1em !important;
     line-height: 1.2 !important;
   }
 
   #mobile-menu nav {
-    gap: 1.25rem !important;
-    padding-top: 1rem !important;
+    gap: 0.85rem !important;
+    padding-top: 0.5rem !important;
     justify-content: center !important;
   }
 
   #mobile-menu {
     overflow-y: auto !important;
-    padding-bottom: 6rem !important;
+    padding-bottom: 4rem !important;
   }
 
-  /* --- 2. HERO IMAGE: Fix cropping on all inner pages ---
-     Target .mobile-hero-img-wrap class added to image containers */
+  /* --- 3. HERO IMAGE: Fix cropping on all inner pages ---
+     The wrapper has overflow-hidden + h-[50vh] which clips the image.
+     We override both to let the image show fully. */
   .mobile-hero-img-wrap {
     height: auto !important;
-    min-height: 260px !important;
+    min-height: 0 !important;
     overflow: visible !important;
-    padding: 1.5rem !important;
+    padding: 1.5rem 1rem 2rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
 
-  .mobile-hero-img-wrap img {
+  .mobile-hero-img-wrap img,
+  .mobile-hero-img {
     height: auto !important;
-    width: 75% !important;
-    max-width: 300px !important;
+    width: 82% !important;
+    max-width: 290px !important;
     transform: none !important;
     margin: 0 auto !important;
     display: block !important;
+    object-fit: contain !important;
   }
 
-  /* --- 3. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
+  /* --- 4. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
   .experience-card {
-    padding-left: 2rem !important;
-  }
-
-  .experience-card .font-label {
-    position: relative !important;
-    display: block !important;
-    margin-bottom: 0.5rem !important;
-    z-index: 1 !important;
+    padding-left: 1.75rem !important;
   }
 
   .experience-card h3 {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
     line-height: 1.2 !important;
     margin-bottom: 0.5rem !important;
   }
 
-  /* --- 4. INDEX.HTML: Fix service cards text overlap --- */
+  /* --- 5. SERVICES PAGE: Fix chalkboard/Nepali text on mobile ---
+     The overlay is absolute inside overflow-hidden, so it's clipped.
+     On mobile we reposition it to sit above the image naturally. */
+  .mobile-chalkboard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 1rem 0.5rem 0.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-chalkboard h3 {
+    font-size: 1.1rem !important;
+    color: rgba(13, 28, 50, 0.7) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Wrap the image + chalkboard together on mobile */
+  .mobile-hero-img-wrap {
+    flex-direction: column !important;
+  }
+
+  /* --- 6. INDEX.HTML: Fix service cards text overlap --- */
   #services-summary .grid > div {
     min-height: auto !important;
-  }
-
-  #services-summary .min-h-\\[60px\\] {
-    min-height: auto !important;
-  }
-
-  /* --- 5. INDEX.HTML: Fix SEO cards section stacking --- */
-  #services-summary .grid {
-    border: none !important;
-  }
-
-  #services-summary .grid > div {
-    border: 1px solid rgba(13, 28, 50, 0.1) !important;
-    margin-bottom: 0 !important;
   }
 }
