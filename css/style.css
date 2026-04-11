@@ -291,6 +291,15 @@ h3[id] {
     max-height: 380px !important;
   }
 
+  /* Services image: zoom in and crop legs from bottom */
+  .mobile-hero-img-wrap.services-img .mobile-hero-img {
+    height: 130% !important;
+    width: auto !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    transform: none !important;
+  }
+
   .mobile-hero-img {
     height: 100% !important;
     width: auto !important;
