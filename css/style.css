@@ -251,7 +251,29 @@ h3[id] {
     margin-bottom: 1rem !important;
   }
 
-  /* --- 3. HERO IMAGE CONTAINER: Increase height so image isn't cropped --- */
+  /* --- 3. HERO SECTION: Remove 100vh height on mobile (inner pages only).
+     On iPhone the 100vh is very tall, creating huge whitespace above content.
+     Let the section be auto-height so content determines the size. --- */
+  .mobile-hero-section {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Inner flex container: also auto height */
+  .mobile-hero-section > div {
+    height: auto !important;
+  }
+
+  /* Left text pane: remove h-full stretch, tighten padding */
+  .mobile-hero-section
+    .w-full.lg\:w-1\/2.flex.items-center.justify-center.px-6.py-8 {
+    height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* --- 4. HERO IMAGE CONTAINER: Increase height so image isn't cropped --- */
   .mobile-hero-img-wrap {
     height: 60vw !important;
     min-height: 240px !important;
@@ -260,6 +282,13 @@ h3[id] {
     display: flex !important;
     align-items: flex-end !important;
     justify-content: center !important;
+  }
+
+  /* Services page: slightly larger image container */
+  .mobile-hero-img-wrap.services-img {
+    height: 70vw !important;
+    min-height: 280px !important;
+    max-height: 380px !important;
   }
 
   .mobile-hero-img {
