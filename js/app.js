@@ -278,8 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openMenu = () => {
     menuOpen = true;
-    mobileMenu.classList.remove("translate-x-full");
-    mobileMenu.classList.add("translate-x-0");
+    mobileMenu.style.transform = "translateX(0)";
     document.body.classList.add("overflow-hidden");
     if (menuSpans && menuSpans.length >= 3) {
       menuSpans[0].style.transform = "rotate(45deg) translate(4px, 4px)";
@@ -290,8 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeMenu = () => {
     menuOpen = false;
-    mobileMenu.classList.remove("translate-x-0");
-    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.style.transform = "translateX(100%)";
     document.body.classList.remove("overflow-hidden");
     if (menuSpans && menuSpans.length >= 3) {
       menuSpans[0].style.transform = "";

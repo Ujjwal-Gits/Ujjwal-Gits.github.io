@@ -174,6 +174,11 @@
     opacity 0.3s ease;
 }
 
+/* Mobile menu slide transition */
+#mobile-menu {
+  transition: transform 0.5s ease-in-out;
+}
+
 /* iPhone/notched device: prevent gap above fixed header caused by safe-area-inset.
    The header uses fixed positioning — on iOS Safari with dynamic toolbar,
    the body starts below the safe area but fixed elements don't account for it,
@@ -280,40 +285,49 @@ h3[id] {
     max-height: 340px !important;
     overflow: hidden !important;
     display: flex !important;
-    align-items: flex-end !important;
+    align-items: flex-start !important;
     justify-content: center !important;
   }
 
   /* Services page: slightly larger image container */
   .mobile-hero-img-wrap.services-img {
-    height: 70vw !important;
-    min-height: 280px !important;
-    max-height: 380px !important;
+    height: 85vw !important;
+    min-height: 320px !important;
+    max-height: 440px !important;
   }
 
-  /* Services image: zoom in more and crop legs from bottom */
+  /* Services image: same size, just shifted down so legs crop at bottom */
   .mobile-hero-img-wrap.services-img .mobile-hero-img {
-    height: 160% !important;
-    width: auto !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    transform: none !important;
+    transform: translateY(5%) !important;
+  }
+
+  /* Education page: larger container, image shifted down to crop legs */
+  .mobile-hero-img-wrap.education-img {
+    height: 130vw !important;
+    min-height: 480px !important;
+    max-height: 600px !important;
+    overflow: hidden !important;
+  }
+
+  .mobile-hero-img-wrap.education-img .mobile-hero-img {
+    height: 140% !important;
+    transform: translateY(10%) !important;
   }
 
   .mobile-hero-img {
-    height: 100% !important;
+    height: 115% !important;
     width: auto !important;
     max-width: none !important;
     transform: none !important;
     object-fit: contain !important;
-    object-position: center bottom !important;
+    object-position: center top !important;
   }
 
   /* --- 4. SERVICES: Show chalkboard text on mobile properly ---
      Keep it visible but scale down to fit the smaller container --- */
   .mobile-chalkboard {
     display: flex !important;
-    top: 4% !important;
+    top: 18% !important;
     left: 3% !important;
     width: 62% !important;
     height: 55% !important;
@@ -329,13 +343,33 @@ h3[id] {
 
   .mobile-chalkboard #chalk-text {
     font-size: 0.7rem !important;
-    line-height: 1.3 !important;
+    line-height: 1.4 !important;
     padding: 0 2px !important;
+    white-space: pre-wrap !important;
+  }
+
+  .mobile-duster {
+    width: 2rem !important;
+    height: 1.25rem !important;
   }
 
   /* --- 5. EXPERIENCE PAGE: Fix date/title overlap in timeline --- */
   .experience-card h3 {
     font-size: 1.3rem !important;
     line-height: 1.2 !important;
+  }
+
+  /* --- 6. HOME PAGE: Experience & education — fix overlap and white space --- */
+
+  /* Remove top offset that causes overlap on mobile */
+  #experience .relative,
+  #education .relative {
+    top: auto !important;
+  }
+
+  /* Reduce section top padding to remove big white space */
+  #experience,
+  #education {
+    padding-top: 2rem !important;
   }
 }

@@ -623,7 +623,7 @@
                 <!-- Professional Duster Element -->
                 <div
                   id="duster"
-                  class="absolute top-0 -left-20 w-16 h-10 md:w-24 md:h-16 bg-[#3d2b1f] border-2 border-[#2b1e15] shadow-2xl opacity-0 flex flex-col items-center justify-center p-2 z-30 pointer-events-none"
+                  class="absolute top-0 -left-20 w-16 h-10 md:w-24 md:h-16 bg-[#3d2b1f] border-2 border-[#2b1e15] shadow-2xl opacity-0 flex flex-col items-center justify-center p-2 z-30 pointer-events-none mobile-duster"
                 >
                   <div
                     class="w-full h-1/2 bg-[#5d4037] rounded-sm mb-1 opacity-40"
@@ -1220,14 +1220,30 @@
           "I provide UI/UX Audit Service",
         ];
 
+        // On mobile: insert newline after every 4 words
+        function formatForMobile(text) {
+          if (window.innerWidth >= 768) return text;
+          const words = text.split(" ");
+          const lines = [];
+          for (let i = 0; i < words.length; i += 4) {
+            lines.push(words.slice(i, i + 4).join(" "));
+          }
+          return lines.join("\n");
+        }
+
         const chalkText = document.getElementById("chalk-text");
         const duster = document.getElementById("duster");
         let currentIdx = 0;
 
         function typeWriter(text, i, cb) {
           if (i < text.length) {
-            chalkText.innerHTML = text.substring(0, i + 1);
-            const delay = text[i] === " " ? 150 : 50 + Math.random() * 50;
+            chalkText.innerHTML = text
+              .substring(0, i + 1)
+              .replace(/\n/g, "<br>");
+            const delay =
+              text[i] === " " || text[i] === "\n"
+                ? 150
+                : 50 + Math.random() * 50;
             setTimeout(() => typeWriter(text, i + 1, cb), delay);
           } else if (cb) {
             setTimeout(cb, 2000);
@@ -1236,7 +1252,7 @@
 
         function animateChalkboard() {
           if (!chalkText || !duster) return;
-          const text = services[currentIdx];
+          const text = formatForMobile(services[currentIdx]);
           typeWriter(text, 0, () => {
             const tl = gsap.timeline({
               onComplete: () => {
@@ -1246,7 +1262,7 @@
             });
 
             const isMobile = window.innerWidth < 768;
-            const sweepX = isMobile ? "420%" : "280%";
+            const sweepX = isMobile ? window.innerWidth * 1.8 + "px" : "280%";
 
             tl.set(duster, { x: "-150%", opacity: 1, top: "25%" })
               .to(duster, {
