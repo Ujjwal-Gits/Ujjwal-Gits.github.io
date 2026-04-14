@@ -1,0 +1,6 @@
+scratch/
+.gemini/
+.vscode/
+node_modules/
+dist/
+*.log
