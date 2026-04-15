@@ -41,6 +41,13 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="bingbot" content="index, follow">
     <meta name="author" content="Ujjwal Rupakheti">
+
+    <!-- Geo Targeting (Local SEO /) -->
+    <meta name="geo.region" content="NP-1" />
+    <meta name="geo.placename" content="Itahari, Nepal" />
+    <meta name="geo.position" content="26.6666;87.2721" />
+    <meta name="ICBM" content="26.6666, 87.2721" />
+
     <meta name="theme-color" content="#0d1c32">
 
     <!-- Schema 1: ProfilePage (Google E-E-A-T Signal) -->
@@ -178,12 +185,69 @@
     }
     </script>
 
-    <!-- Schema 5: Speakable (Voice Search Optimization) -->
+    <!-- Schema 5: WebPage with Speakable (Voice Search Optimization) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SpeakableSpecification",
-      "cssSelector": [".font-headline", ".leading-relaxed"]
+      "@type": "WebPage",
+      "name": "Ujjwal Rupakheti - #1 SEO Expert in Nepal & Web Developer",
+      "url": "https://www.ujjwalrupakheti.com.np/author/ujjwal-rupakheti/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".leading-relaxed", ".font-headline"]
+      }
+    }
+    </script>
+
+    <!-- Schema 6: ProfessionalService (Hyper-Local "in Nepal" GEO — 50km) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Ujjwal Rupakheti - #1 SEO Expert & Web Developer in Nepal",
+      "image": "https://www.ujjwalrupakheti.com.np/assets/images/Uzal-Hero.png",
+      "url": "https://www.ujjwalrupakheti.com.np/",
+      "telephone": "+977-9826304766",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Itahari-1",
+        "addressLocality": "Itahari",
+        "addressRegion": "Koshi Province",
+        "postalCode": "56705",
+        "addressCountry": "NP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.6666,
+        "longitude": 87.2721
+      },
+      "areaServed": [
+        {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.6666,
+            "longitude": 87.2721
+          },
+          "geoRadius": "50000"
+        },
+        { "@type": "City", "name": "Itahari" },
+        { "@type": "City", "name": "Dharan" },
+        { "@type": "City", "name": "Biratnagar" },
+        { "@type": "City", "name": "Inaruwa" },
+        { "@type": "City", "name": "Damak" },
+        { "@type": "City", "name": "Urlabari" },
+        { "@type": "City", "name": "Kathmandu" }
+      ],
+      "description": "Ujjwal Rupakheti is Nepal's #1 ranked SEO expert and professional web developer based in Itahari-1. Available 24/7 for expert consultation and search dominance.",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "sameAs": [
+        "https://www.linkedin.com/in/ujjwal-rupakheti-bb421b339/",
+        "https://github.com/Ujjwal-Gits",
+        "https://www.instagram.com/mr.uzaldahal/"
+      ]
     }
     </script>
 
@@ -604,3 +668,4 @@
     </script>
 </body>
 </html>
+
