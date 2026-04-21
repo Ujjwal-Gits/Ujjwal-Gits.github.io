@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Disallow: /assets/favicon/
+Allow: /assets/favicon/
 
 # Sitemaps
 Sitemap: https://www.ujjwalrupakheti.com.np/sitemap.xml
