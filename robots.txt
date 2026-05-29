@@ -5,6 +5,17 @@ User-agent: *
 Allow: /
 Allow: /assets/favicon/
 
+# Block non-content directories from wasting crawl budget
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.well-known/
+Disallow: /audit-results.json
+Disallow: /audit.js
+Disallow: /tailwind.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
 # Sitemaps
 Sitemap: https://www.ujjwalrupakheti.com.np/sitemap.xml
 
